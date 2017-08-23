@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
+import ProfilePicture from "./settings/profilePicture.component";
 
 export default () =>
-  <View>
-    <Text>Issou settings</Text>
+  <View style={{ backgroundColor: "purple" }}>
+    <Text>Paramètres</Text>
+    <ProfilePicture />
   </View>;
