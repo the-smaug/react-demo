@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NativeRouter, Route } from "react-router-native";
 
 import Home from "./views/home.view";
@@ -10,9 +10,22 @@ import Menu from "./layout/menu.layout";
 
 export default () =>
   <NativeRouter>
-    <View>
+    <View style={styles.menu}>
       <Menu />
-      <Route exact path="/" component={Home} />
-      <Route path="/settings" component={Settings} />
+
+      <View style={styles.container}>
+        <Route exact path="/" component={Home} />
+        <Route path="/settings" component={Settings} />
+      </View>
     </View>
   </NativeRouter>;
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  menu: {
+    marginTop: "15px"
+  }
+});
