@@ -3,5 +3,5 @@ import { View, Text } from "react-native";
 
 export default () =>
   <View>
-    <Text>Issou</Text>
+    <Text>Issou home</Text>
   </View>;
