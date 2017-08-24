@@ -2,32 +2,41 @@ import React, { Component } from "react";
 import { View, Button } from "react-native";
 import { Audio } from "expo";
 
-export default class Music extends Component {
-  state = {
-    audio: new Audio.Sound({
-      source: `../assets/sounds/${this.props.duration}/${this.props.sound}.mp3`
-    })
-  };
+export default class Item extends Component {
+  // async componentDidMount() {
+  //   const { duration, sound } = this.props;
+  //   const mp3 = require(`../sounds/${duration}/${sound}.mp3`);
+  //   console.log(mp3);
+  //   try {
+  //     await this.state.audio.loadAsync(mp3);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
 
-  async componentDidMount() {
-    await this.state.audio.loadAsync();
+  componentDidCatch(error, info) {
+    console.log("###", error, info);
   }
 
   playMusic = async () => {
+    const { duration, sound } = this.props;
+    const mp3 = require(`../sounds/${duration}/${sound}.mp3`);
+
     try {
-      await this.state.audio.playAsync();
+      const audio = new Audio.Sound();
+      await audio.loadAsync(mp3);
+      await audio.playAsync();
     } catch (error) {
-      console.log("erreur plahyMusic", error);
+      console.error("music", mp3);
     }
   };
 
   render() {
     const { title, picture } = this.props;
-    console.log(this.state.audio);
     return (
       <Button
-        onPress={this.playMusic}
-        title={title}
+        onPress={() => this.playMusic()}
+        title="foo"
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
       />
