@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, Button } from "react-native";
 import { Audio } from "expo";
 
-export default class App extends Component {
+export default class Music extends Component {
   state = {
     soundObject: new Audio.Sound(),
     song: require("../../sounds/galway-girl.mp3"),
