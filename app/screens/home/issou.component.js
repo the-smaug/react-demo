@@ -17,7 +17,7 @@ export default class Issou extends Component {
                 width: 150,
                 height: 150
               }}
-              source={require("../../img/avatar.png")}
+              source={require("../../assets/img/avatar.png")}
             />
           );
         })}

@@ -5,7 +5,7 @@ import { Audio } from "expo";
 export default class Music extends Component {
   state = {
     soundObject: new Audio.Sound(),
-    song: require("../../sounds/galway-girl.mp3"),
+    song: require("../../assets/sounds/galway-girl.mp3"),
     isPlaying: false
   };
 
