@@ -3,13 +3,13 @@ import { AppRegistry, Text, Button, View } from "react-native";
 import { TabNavigator } from "react-navigation";
 
 // Screens
-import HomeScreen from "./screens/home.screen";
-import SettingsScreen from "./screens/settings.screen";
+import ShortScreen from "./screens/short.screen";
+import LongScreen from "./screens/long.screen";
 
 const SimpleApp = TabNavigator(
   {
-    Home: { screen: HomeScreen },
-    Settings: { screen: SettingsScreen }
+    Short: { screen: ShortScreen },
+    Long: { screen: LongScreen }
   },
   {
     tabBarPosition: "bottom"
