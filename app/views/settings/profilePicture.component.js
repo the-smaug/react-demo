@@ -28,8 +28,11 @@ export default class ProfilePicture extends Component {
         : "http://www.fantasynetwork.com/wp-content/uploads/2015/11/img_placeholder_avatar.jpg";
     return (
       <View>
-        <TouchableHighlight onPress={() => this.pickImage()}>
-          <Image style={styles.profilePicture} source={{ uri: pictureUri }} />
+        <TouchableHighlight
+          style={styles.profilePicture}
+          onPress={() => this.pickImage()}
+        >
+          <Image style={{ zIndex: 100 }} source={{ uri: pictureUri }} />
         </TouchableHighlight>
       </View>
     );
