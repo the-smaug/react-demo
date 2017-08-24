@@ -1,54 +1,36 @@
-// import React, { Component } from "react";
-// import { View, Button } from "react-native";
-// import { Audio } from "expo";
+import React, { Component } from "react";
+import { View, Button } from "react-native";
+import { Audio } from "expo";
 
-// export default class Music extends Component {
-//   state = {
-//     soundObject: new Audio.Sound(),
-//     song: require("../../assets/sounds/galway-girl.mp3"),
-//     isPlaying: false
-//   };
+export default class Music extends Component {
+  state = {
+    audio: new Audio.Sound({
+      source: `../assets/sounds/${this.props.duration}/${this.props.sound}.mp3`
+    })
+  };
 
-//   playMusic = async () => {
-//     if (!this.state.isPlaying) {
-//       try {
-//         await this.state.soundObject.loadAsync(this.state.song);
-//         await this.state.soundObject.playAsync();
-//         console.log(this.state.soundObject, "oui");
-//         this.setState({
-//           isPlaying: true
-//         });
-//         // Your sound is playing!
-//       } catch (error) {
-//         await this.state.soundObject.playAsync();
-//         console.log(error, "non");
-//       }
-//     }
-//   };
+  async componentDidMount() {
+    await this.state.audio.loadAsync();
+  }
 
-//   stopMusic = async () => {
-//     this.state.soundObject.stopAsync();
-//     this.setState({
-//       isPlaying: false
-//     });
-//   };
+  playMusic = async () => {
+    try {
+      await this.state.audio.playAsync();
+    } catch (error) {
+      console.log("erreur plahyMusic", error);
+    }
+  };
 
-//   render() {
-//     return (
-//       <View>
-//         <Button
-//           onPress={this.playMusic}
-//           title="Learn More"
-//           color="#841584"
-//           accessibilityLabel="Learn more about this purple button"
-//         />
-//         <Button
-//           onPress={this.stopMusic}
-//           title="Stop music"
-//           color="#841584"
-//           accessibilityLabel="Learn more about this purple button"
-//         />
-//       </View>
-//     );
-//   }
-// }
+  render() {
+    const { title, picture } = this.props;
+    console.log(this.state.audio);
+    return (
+      <Button
+        onPress={this.playMusic}
+        title={title}
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+      />
+    );
+  }
+}
