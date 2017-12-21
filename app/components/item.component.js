@@ -8,8 +8,6 @@ export default class Item extends Component {
     audio: new Audio.Sound()
   };
 
-  async componentDidMount() {}
-
   playMusic = async () => {
     const { sound } = this.props;
     try {
@@ -27,13 +25,11 @@ export default class Item extends Component {
         <Avatar
           xlarge
           rounded
-          source={require("../img/avatar.png")}
+          source={picture}
           onPress={this.playMusic}
           activeOpacity={0.7}
         />
-        <Text>
-          {title}
-        </Text>
+        <Text>{title}</Text>
       </View>
     );
   }
