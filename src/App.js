@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 
 import ListItem from "./components/ListItem";
-// import { loadFile } from "./api/StorageApi";
 import { storage } from "./config/firebase";
 import files from "./config/files";
+
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -30,8 +31,6 @@ class App extends Component {
       })
     );
 
-    console.log(soundsUrl);
-
     this.setState({
       items: soundsUrl
     });
@@ -49,10 +48,10 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
+      <ul className="App">
         {this.state.items.map(({ title, soundUrl }, key) => {
           return (
-            <ListItem key={key}>
+            <ListItem className="App__ListItem" key={key}>
               <button
                 onClick={() => {
                   this.playSound(key);

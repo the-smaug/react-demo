@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.App__ListItem {
+  width: 50%;
+}
