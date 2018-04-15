@@ -1,36 +1,33 @@
 {
-  "name": "RNApp",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "jest-expo": "~24.0.0",
-    "react-native-scripts": "1.8.1",
-    "react-test-renderer": "16.2.0"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "name": "app-traveled",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/the-smaug/app-traveled.git",
+  "author": "Maxime Blanc <maxime.blanc@m6.fr>",
+  "license": "MIT",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "lint": "eslint src/"
   },
   "dependencies": {
-    "expo": "^23.0.6",
-    "history": "^4.7.2",
-    "immutable": "^3.8.1",
-    "native-base": "^2.3.5",
-    "react": "^16.0.0",
-    "react-native": "^0.50.4",
-    "react-native-elements": "^0.16.0",
-    "react-native-side-menu": "^1.0.2",
-    "react-native-sound": "^0.10.4",
-    "react-navigation": "^1.0.0-beta.22",
-    "react-redux": "^5.0.6",
-    "react-router-native": "^4.1.1",
-    "redux": "^3.7.2"
+    "firebase": "4.12.1",
+    "normalize.css": "8.0.0",
+    "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0",
+    "react-dom": "16.3.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-runtime": "6.26.0",
+    "eslint": "4.19.1",
+    "eslint-config-standard": "11.0.0",
+    "eslint-config-standard-react": "6.0.0",
+    "parcel-bundler": "1.7.0"
   }
 }
