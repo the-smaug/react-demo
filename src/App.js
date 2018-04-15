@@ -25,10 +25,13 @@ class App extends Component {
 
   async componentDidMount() {
     const soundsUrl = await Promise.all(
-      files.map(async ({ sound, title }) => {
-        const soundsRef = storage.ref(sound);
-        const soundUrl = await soundsRef.getDownloadURL();
-        return { soundUrl, title };
+      files.map(async ({ sound, title, image }) => {
+        const soundRef = storage.ref(sound);
+        const soundUrl = await soundRef.getDownloadURL();
+
+        const imageRef = storage.ref(image);
+        const imageUrl = await imageRef.getDownloadURL();
+        return { soundUrl, title, imageUrl };
       })
     );
 
@@ -50,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.items.map(({ title, soundUrl }, key) => {
+        {this.state.items.map(({ title, soundUrl, imageUrl }, key) => {
           return (
             <ListItem classprop="App__ListItem" key={key}>
               <Pressable
@@ -58,6 +61,7 @@ class App extends Component {
                   this.playSound(key);
                 }}
                 value={title}
+                backgroundurl={imageUrl}
               />
               <audio ref={this.sounds[key]} src={soundUrl}>
                 Votre navigateur ne supporte pas l'élément <code>audio</code>.
