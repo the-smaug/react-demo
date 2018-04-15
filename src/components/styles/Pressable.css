@@ -10,10 +10,13 @@
   text-shadow: 0 0 2px #000;
   letter-spacing: 1px;
   color: white;
+  transition: all 0.25s ease;
 }
 
 .Pressable:active {
   border-color: white;
   color: grey;
   text-shadow: 0 0 2px #fff;
+  transform: scale(1.05);
+  transition: all 0.25s ease;
 }
