@@ -1,8 +1,26 @@
 {
-  "presets": ["babel-preset-expo"],
-  "env": {
-    "development": {
-      "plugins": ["transform-react-jsx-source"]
-    }
-  }
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    "transform-async-to-generator",
+    "transform-object-rest-spread"
+  ]
 }
