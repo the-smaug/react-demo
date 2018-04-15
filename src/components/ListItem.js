@@ -5,8 +5,9 @@ import "./styles/ListItem.css";
 class ListItem extends Component {
   render() {
     const { props } = this;
+
     return (
-      <li className={`${props.className} ListItem`} {...props}>
+      <li className={`${props.classprop} ListItem`} {...props}>
         {props.children}
       </li>
     );

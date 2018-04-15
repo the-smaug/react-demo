@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import ListItem from "./components/ListItem";
+import Pressable from "./components/Pressable";
 import { storage } from "./config/firebase";
 import files from "./config/files";
 
@@ -51,14 +52,13 @@ class App extends Component {
       <ul className="App">
         {this.state.items.map(({ title, soundUrl }, key) => {
           return (
-            <ListItem className="App__ListItem" key={key}>
-              <button
+            <ListItem classprop="App__ListItem" key={key}>
+              <Pressable
                 onClick={() => {
                   this.playSound(key);
                 }}
-              >
-                {title}
-              </button>
+                value={title}
+              />
               <audio ref={this.sounds[key]} src={soundUrl}>
                 Votre navigateur ne supporte pas l'élément <code>audio</code>.
               </audio>

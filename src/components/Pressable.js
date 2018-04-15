@@ -4,7 +4,12 @@ import "./styles/Pressable.css";
 
 class Pressable extends Component {
   render() {
-    return <button>{this.props.value}</button>;
+    const { props } = this;
+    return (
+      <button className="Pressable" {...props}>
+        {props.value}
+      </button>
+    );
   }
 }
 
