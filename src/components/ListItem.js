@@ -7,9 +7,9 @@ class ListItem extends Component {
     const { props } = this;
 
     return (
-      <li className={`${props.classprop} ListItem`} {...props}>
+      <div className={`${props.classprop} ListItem`} {...props}>
         {props.children}
-      </li>
+      </div>
     );
   }
 }

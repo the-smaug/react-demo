@@ -49,7 +49,7 @@ class App extends Component {
 
   render() {
     return (
-      <ul className="App">
+      <div className="App">
         {this.state.items.map(({ title, soundUrl }, key) => {
           return (
             <ListItem classprop="App__ListItem" key={key}>
@@ -65,7 +65,7 @@ class App extends Component {
             </ListItem>
           );
         })}
-      </ul>
+      </div>
     );
   }
 }
