@@ -50,7 +50,6 @@ class App extends Component {
   render() {
     return (
       <ul>
-        <span style={{ color: "red" }}>Issou</span>
         {this.state.items.map(({ title, soundUrl }, key) => {
           return (
             <ListItem key={key}>
