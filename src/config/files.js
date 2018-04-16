@@ -38,5 +38,50 @@ export default [
     image: "images/soral--bonnet.png",
     sound: "sounds/humiliation-detre-des-fiottes.mp3",
     title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/je-lai-giflé.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/le-cul-a-lair.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/lesbienne-hysterique.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/lobbie-tapeto-socialiste.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/maitre-quenellier.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/pedophile-de-gauche.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/pet-a-son-ame.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/philosémite.mp3",
+    title: "Fiottes"
+  },
+  {
+    image: "images/soral--bonnet.png",
+    sound: "sounds/une-grosse-et-une-demi-grosse.mp3",
+    title: "Fiottes"
   }
 ];
