@@ -1,14 +1,14 @@
-import { storage } from "../config/firebase";
+import { storage } from '../config/firebase'
 
 export const uploadFile = async (ref, file) => {
   try {
-    const storageRef = storage.ref(ref);
-    const response = await storageRef.put(file);
+    const storageRef = storage.ref(ref)
+    const response = await storageRef.put(file)
 
-    return response;
+    return response
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
-};
+}
 
-export const loadFile = () => {};
+export const loadFile = () => {}

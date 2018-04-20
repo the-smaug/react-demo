@@ -4,6 +4,12 @@ cache:
   paths:
     - node_modules/
 
+integration:
+  stage: integration
+  script:
+    - yarn install
+    - yarn lint
+
 deploy:
   stage: deploy
   environment: Production
