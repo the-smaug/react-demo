@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
 import ListItem from './components/ListItem'
 import Pressable from './components/Pressable'
@@ -7,12 +8,17 @@ import files from './config/files'
 
 import './App.css'
 
+const Wrapper = styled.div`
+  width: 50%;
+  margin-bottom: 10px;
+`
+
 class App extends Component {
   state = {
     items: [],
     playingItem: null,
     refs: []
-  };
+  }
 
   constructor () {
     super()
@@ -42,31 +48,33 @@ class App extends Component {
 
   playSound = soundKey => {
     this.sounds[soundKey].current.play()
-  };
+  }
 
   endPlay = () => {
     this.setState({
       playingItem: null
     })
-  };
+  }
 
   render () {
     return (
       <div className='App'>
         {this.state.items.map(({ title, soundUrl, imageUrl }, key) => {
           return (
-            <ListItem classprop='App__ListItem' key={key}>
-              <Pressable
-                onClick={() => {
-                  this.playSound(key)
-                }}
-                value={title}
-                backgroundurl={imageUrl}
-              />
-              <audio ref={this.sounds[key]} src={soundUrl}>
-                Votre navigateur ne supporte pas l'élément <code>audio</code>.
-              </audio>
-            </ListItem>
+            <Wrapper key={key}>
+              <ListItem>
+                <Pressable
+                  onClick={() => {
+                    this.playSound(key)
+                  }}
+                  value={title}
+                  backgroundurl={imageUrl}
+                />
+                <audio ref={this.sounds[key]} src={soundUrl}>
+                  Votre navigateur ne supporte pas l'élément <code>audio</code>.
+                </audio>
+              </ListItem>
+            </Wrapper>
           )
         })}
       </div>
