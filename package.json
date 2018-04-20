@@ -11,10 +11,10 @@
     "lint": "eslint src/**/*.js --cache"
   },
   "dependencies": {
-    "firebase": "4.12.1",
+    "firebase": "4.13.0",
     "normalize.css": "8.0.0",
-    "react": "16.3.1",
-    "react-dom": "16.3.1"
+    "react": "16.3.2",
+    "react-dom": "16.3.2"
   },
   "devDependencies": {
     "babel-eslint": "8.2.3",
@@ -33,7 +33,7 @@
     "eslint-plugin-promise": "3.7.0",
     "eslint-plugin-react": "7.7.0",
     "eslint-plugin-standard": "3.0.1",
-    "parcel-bundler": "1.7.0",
+    "parcel-bundler": "1.7.1",
     "styled-components": "3.2.6"
   }
 }
