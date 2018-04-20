@@ -38,50 +38,50 @@ export default [
     image: 'images/soral--bonnet.png',
     sound: 'sounds/humiliation-detre-des-fiottes.mp3',
     title: 'Fiottes'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/je-lai-giflé.mp3',
-    title: 'Giflé'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/le-cul-a-lair.mp3',
-    title: "Cul a l'air"
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/lesbienne-hysterique.mp3',
-    title: 'Lesbienne'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/lobbie-tapeto-socialiste.mp3',
-    title: 'Lobbie'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/maitre-quenellier.mp3',
-    title: 'Maitre'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/pedophile-de-gauche.mp3',
-    title: 'Pédophile'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/pet-a-son-ame.mp3',
-    title: 'Paix à son âme'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/philosémite.mp3',
-    title: 'Philosémite'
-  },
-  {
-    image: 'images/soral--bonnet.png',
-    sound: 'sounds/une-grosse-et-une-demi-grosse.mp3',
-    title: 'Grosse'
   }
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/je-lai-giflé.mp3',
+  //   title: 'Giflé'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/le-cul-a-lair.mp3',
+  //   title: "Cul a l'air"
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/lesbienne-hysterique.mp3',
+  //   title: 'Lesbienne'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/lobbie-tapeto-socialiste.mp3',
+  //   title: 'Lobbie'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/maitre-quenellier.mp3',
+  //   title: 'Maitre'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/pedophile-de-gauche.mp3',
+  //   title: 'Pédophile'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/pet-a-son-ame.mp3',
+  //   title: 'Paix à son âme'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/philosémite.mp3',
+  //   title: 'Philosémite'
+  // },
+  // {
+  //   image: 'images/soral--bonnet.png',
+  //   sound: 'sounds/une-grosse-et-une-demi-grosse.mp3',
+  //   title: 'Grosse'
+  // }
 ]
