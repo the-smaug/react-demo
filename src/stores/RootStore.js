@@ -1,5 +1,7 @@
 import AppStore from './AppStore'
+import UploadStore from './UploadStore'
 
 export default {
-  appStore: AppStore
+  appStore: AppStore,
+  uploadStore: UploadStore
 }

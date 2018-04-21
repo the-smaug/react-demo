@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   transition: transform 200ms ease;
 `
 
-@inject('appStore')
+@inject('appStore', 'uploadStore')
 @observer
 class Uploader extends Component {
   addNewSound = () => {
@@ -26,6 +26,8 @@ class Uploader extends Component {
   }
 
   render () {
+    const { uploadStore } = this.props
+
     return (
       <Wrapper visible={this.props.appStore.isUploaderOpen}>
         <button
@@ -36,8 +38,16 @@ class Uploader extends Component {
           Fermer
         </button>
 
-        <ImageUpload imageCallback={() => {}} />
-        <SoundUpload fileCallback={() => {}} />
+        <ImageUpload
+          imageCallback={image => {
+            uploadStore.setImage(image)
+          }}
+        />
+        <SoundUpload
+          fileCallback={sound => {
+            uploadStore.setSound(sound)
+          }}
+        />
 
         <button
           onClick={() => {
