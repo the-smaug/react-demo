@@ -3,6 +3,9 @@ import styled from 'styled-components'
 
 import ListItem from './components/ListItem'
 import Pressable from './components/Pressable'
+import Uploader from './components/Uploader'
+import Menu from './components/Menu'
+
 import { storage } from './config/firebase'
 import files from './config/files'
 
@@ -59,6 +62,8 @@ class App extends Component {
   render () {
     return (
       <div className='App'>
+        <Menu />
+        <Uploader />
         {this.state.items.map(({ title, soundUrl, imageUrl }, key) => {
           return (
             <Wrapper key={key}>
