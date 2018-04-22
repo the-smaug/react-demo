@@ -1,10 +1,4 @@
 {
-  "name": "app-traveled",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/the-smaug/app-traveled.git",
-  "author": "Maxime Blanc <maxime.blanc@m6.fr>",
-  "license": "MIT",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
