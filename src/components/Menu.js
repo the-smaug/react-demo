@@ -10,7 +10,9 @@ const Navbar = styled.nav`
   background: white;
 `
 
-const UploadButton = styled.button``
+const UploadButton = styled.button`
+  outline: none;
+`
 
 @inject('appStore')
 @observer
